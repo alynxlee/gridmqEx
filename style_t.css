@@ -1,0 +1,148 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header {
+  background: #000;
+  position: fixed;
+  z-index: 9999;
+  width: 100vw;
+}
+.menu {
+  padding: 10px 30px;
+  text-align: center;
+  display: grid;
+  grid-template: 1fr / 1fr 4fr 4fr 1fr;
+}
+.menu li:first-child {
+  justify-self: start;
+}
+.menu li:nth-child(2) {
+  justify-self: start;
+}
+.menu li:nth-child(3) {
+  justify-self: end;
+}
+.menu li:last-child {
+  justify-self: end;
+}
+header .logo {
+  padding: 20px 30px;
+  display: grid;
+  grid-template: 1fr / 1fr 2fr;
+}
+.tablet_menu {
+  margin: 0;
+  align-self: center;
+  display: grid;
+  grid-template: 1fr / repeat(4, 1fr);
+  font-size: 1.5em;
+  justify-items: end;
+  position: relative;
+}
+.tablet_menu li:first-child a::after {
+    content: "";
+    background: url(./images/house-chimney-solid.svg) no-repeat 50% / cover;
+    position: absolute;
+    top: 15%; left: 13%;
+    width: 18px; height: 18px;
+}
+.tablet_menu li:nth-child(2) a::after {
+    content: "";
+    background: url(./images/newspaper-regular.svg) no-repeat 50% / cover;
+    position: absolute;
+    top: 15%; left: 37%;
+    width: 18px; height: 18px;
+}
+.tablet_menu li:nth-child(3) a::after {
+    content: "";
+    background: url(./images/podcast-solid.svg) no-repeat 50% / cover;
+    position: absolute;
+    top: 15%; left: 60%;
+    width: 18px; height: 18px;
+}
+.tablet_menu li:nth-child(4) a::after {
+    content: "";
+    background: url(./images/bag-shopping-solid.svg) no-repeat 50% / cover;
+    position: absolute;
+    top: 15%; left: 84%;
+    width: 18px; height: 18px;
+}
+header .logo::after {
+  content: "";
+  display: none;
+}
+main {
+    grid-auto-columns: 300px;
+    grid-template: repeat(5, 1fr) / repeat(4, 1fr);
+    position: relative;
+    top: 140px;
+}
+main .item1 {
+    grid-column: 1 / span 3;
+}
+main .item1 h1 {
+    
+    bottom: -16%;
+}
+main .item2 {
+    grid-column: 4 / span 1;
+    grid-row: 1 / 1;
+    background: #fff;
+    color: #000;
+    cursor: default;
+}
+main .item2:hover {
+  background: none;
+}
+main .item3 {
+    display: block;
+    background: #000;
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    cursor: pointer;
+}
+main .item3:hover::after {
+  content: "";
+  background: url(./images/fish-solid.svg) no-repeat 50% / cover;
+  position: absolute;
+  top: 30%; left: 10%;
+  width: 280px; height: 230px;
+  transform: rotate(-45deg);
+}
+main .item4 {
+    display: block;
+    background: url(./images/interior_img2.jpg) no-repeat 50% / cover;
+}
+main .item6 {
+    grid-column: 3 / span 2;
+}
+main .item7 {
+    display: block;
+    background: url(./images/interior_img4.jpg) no-repeat 50% / cover;
+    grid-column: 1 / span 2;
+}
+main .item8 {
+    grid-row: 4 / span 1;
+    grid-column: 3 / span 1;
+}
+main .item9 {
+    display: block;
+    background: url(./images/interior_img5.jpg) no-repeat 50% / cover;
+}
+main .item10 {
+    grid-column: 1 / span 2;
+}
+footer {
+  bottom: -140px;
+}
